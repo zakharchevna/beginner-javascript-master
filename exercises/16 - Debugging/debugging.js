@@ -7,10 +7,12 @@ const people = [
 people.forEach((person, index) => {
   // console.log(person.name);
   // console.table(people);
-  console.group(`${person.name}`);
-  console.log(person.country);
-  console.log(person.cool);
-  console.groupEnd(`${person.name}`);
+  // console.group(`${person.name}`);
+  // console.log(person.country);
+  // console.log(person.cool);
+  // console.groupEnd(`${person.name}`);
+  debugger;
+  console.log(person.name);
 });
 
 // Console Methods
