@@ -5,15 +5,18 @@
 // document.addEventListener('DOMContentLoaded', init);
 
 const p = document.querySelector('p');
-console.log(p);
+// console.log(p);
 
 const divs = document.querySelectorAll('div');
-console.log(divs);
+// console.log(divs);
 
+const heading = document.querySelector('h2');
+console.log(heading.textContent);
+console.log(heading.innerText);
 
-const item2 = document.querySelector('.item2');
-const item2Image = item2.querySelector('img');
+const pizzaList = document.querySelector('.pizza');
+console.log(pizzaList.textContent);
 
-console.log(item2Image);
+// pizzaList.textContent = `${pizzaList.textContent} 🍕`
 
-
+pizzaList.insertAdjacentText('beforeend', '🍕');
