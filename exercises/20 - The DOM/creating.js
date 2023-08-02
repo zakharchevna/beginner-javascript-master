@@ -16,8 +16,10 @@ const listItem3 = document.createElement('li');
 listItem3.textContent = 'I am thirt li';
 listItem3.classList.add('third');
 
-const listItem5 = document.createElement('li');
+// const listItem5 = document.createElement('li');
+const listItem5 = listItem1.cloneNode(true);
 listItem5.textContent = 'I am fifth li';
+listItem5.classList.remove('first');
 listItem5.classList.add('fifth');
 
 list.appendChild(listItem1);
