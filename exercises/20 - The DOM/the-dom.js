@@ -34,3 +34,16 @@ function toggleRound() {
 
 pic.addEventListener('click', toggleRound);
 
+pic.alt = "Black roses";
+pic.width = "400";
+
+pic.addEventListener('load', function(){
+  console.log(pic.naturalWidth);
+});
+
+const custom = document.querySelector('.custom');
+console.log(custom.dataset);
+
+custom.addEventListener('click', function(){
+  alert(`Hello ${custom.dataset.name} ${custom.dataset.language}`);
+});
