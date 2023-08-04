@@ -36,4 +36,17 @@ signupForm.name.addEventListener('keydown', logEvent);
 signupForm.name.addEventListener('focus', logEvent);
 signupForm.name.addEventListener('blur', logEvent);
 
+const photo = document.querySelector('.photo');
+
+function handlePhotoClick(event) {
+  if(event.type === "click" || event.key === "Enter") {
+    console.log('You clicked a photo')
+  }
+};
+
+photo.addEventListener('click', handlePhotoClick);
+photo.addEventListener('keyup', handlePhotoClick);
+
+// http://keycode.info 
+
 
