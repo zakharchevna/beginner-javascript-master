@@ -58,12 +58,18 @@ ctx.moveTo(x, y);
 ctx.lineTo(x, y);
 ctx.stroke();
 // write a handler for the keys
+let activeCanvas = canvas;
+canvas.addEventListener("click", () => {
+  activeCanvas = canvas;
+});
 function handleKey(e) {
   if(e.key.includes('Arrow')) {
     e.preventDefault();
-    draw({key: e.key});
-    // console.log(e.key);
-    // console.log('Handling Key');
+    if(activeCanvas === canvas){
+      draw({key: e.key});
+      // console.log(e.key);
+      // console.log('Handling Key');
+    }
   }
 }
 // clear /shake function
@@ -87,7 +93,7 @@ window.addEventListener('keydown', handleKey);
 const canvas1 = document.querySelector("#canvas1");
 const clearBtn = document.querySelector(".clear");
 const ctx1 = canvas1.getContext("2d");
-const MOVE_AMOUNT1 = Math.floor(Math.random() * 50);
+const MOVE_AMOUNT1 = 20;
 // Setup our canvas for drawing
 ctx1.lineJoin = "bevel";
 ctx1.lineCap = "butt";
@@ -132,10 +138,15 @@ ctx1.moveTo(x1, y1);
 ctx1.lineTo(x1, y1);
 ctx1.stroke();
 // write a handler for the keys
+canvas1.addEventListener("click", () => {
+  activeCanvas = canvas1;
+});
 function handleKeys (e) {
   if(e.key.includes("Arrow")) {
     e.preventDefault();
-    draw1({key: e.key});
+    if(activeCanvas === canvas1) {
+      draw1({key: e.key});
+    }
   }
 }
 // clear /shke function
