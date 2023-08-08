@@ -25,6 +25,8 @@ const MOVE_AMOUNT = 10;
 let hue = 0;
 function draw({key}) {
   console.log(key);
+  // increment the hue  
+  // https://mothereffinghsl.com
   hue +=2;
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
   ctx.beginPath();
@@ -45,12 +47,9 @@ function draw({key}) {
     default: 
     break;
   }
-  
   ctx.lineTo(x,y);
   ctx.stroke();
 }
-// increment the hue  
-// https://mothereffinghsl.com
 
 // start the path
 ctx.beginPath();
@@ -67,39 +66,21 @@ function handleKey(e) {
     // console.log('Handling Key');
   }
 }
-// clear /shke function
+// clear /shake function
 function clearCanvas() {
-  shakeBtn.classList.add('shake');
+  canvas.classList.add('shake');
+  ctx.clearRect(0, 0, width, height);
+  canvas.addEventListener('animationend', () => {
+    canvas.classList.remove('shake');
+    console.log('Done the shake!');
+  }, 
+  {once: true}
+  );
 }
+
+shakeBtn.addEventListener('click', clearCanvas);
 // listen for arrow keys
 window.addEventListener('keydown', handleKey);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Select the elements on the page - canvas, shake button
