@@ -14,7 +14,7 @@ function scrollToAccept() {
     // console.log(load[0].intersectionRatio);
     if(load[0].intersectionRatio === 1) {
       button.disabled = false;
-      ob.unobserve(terms.lastElementChild)
+      ob.unobserve(terms.lastElementChild);
     } 
     // else {
     //   button.disabled = true;
@@ -25,15 +25,15 @@ function scrollToAccept() {
     root: terms,
     threshold: 1,
   });
-}
-//   ob.observe(terms.lastElementChild);
-
-//   function handleScrollTerms(event) {
-    // console.log(event.currentTarget.scrollTop);
-    // console.log(event.currentTarget.scrollHeight);
-//   }
   
-//   terms.addEventListener("scroll", handleScrollTerms);
-// }
+  ob.observe(terms.lastElementChild);
 
-// scrollToAccept();
+  // function handleScrollTerms(event) {
+  //   console.log(event.currentTarget.scrollTop);
+  //   console.log(event.currentTarget.scrollHeight);
+  // }
+  
+  // terms.addEventListener("scroll", handleScrollTerms);
+}
+
+scrollToAccept();
