@@ -25,7 +25,7 @@ function scrollToAccept() {
     root: terms,
     threshold: 1,
   });
-
+}
 //   ob.observe(terms.lastElementChild);
 
 //   function handleScrollTerms(event) {
