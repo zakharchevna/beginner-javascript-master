@@ -17,19 +17,19 @@ function handleTabClick(event) {
   // find the associated tabPanel and show it!
   const { id } = event.currentTarget;
 
-  /*
-    METHOD 1
+  
+    // METHOD 1
   const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
   console.log(tabPanel);
   tabPanel.hidden = false;
-  */
+  
 
   // METHOD 2 - find in the array of tabPanels
-  console.log(tabPanels);
-  const tabPanel = tabPanels.find(
-    panel => panel.getAttribute('aria-labelledby') === id
-  );
-  tabPanel.hidden = false;
+  // console.log(tabPanels);
+  // const tabPanel = tabPanels.find(
+  //   panel => panel.getAttribute('aria-labelledby') === id
+  // );
+  // tabPanel.hidden = false;
 }
 
 tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
