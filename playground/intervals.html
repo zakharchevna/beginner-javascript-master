@@ -10,6 +10,51 @@
 
 <body>
 
+
+  <script>
+    function sayHi() {
+      console.log("Hello there");
+    }
+    console.log("start");
+    setTimeout(sayHi, 5000);
+    console.log("finish");
+
+    function intervalDemonstration() {
+      console.log("Data for intervals");
+    }
+
+    setInterval(sayHi, 3500);
+
+    function setImmediateInterval(funcRun, ms) {
+      funcRun();
+      return setInterval(funcRun, ms);
+    }
+
+    setImmediateInterval(intervalDemonstration, 3000);
+
+    function destroy() {
+      console.log("DESTROYED");
+      document.body.innerHTML = `<p>DESTROYED</p>`;
+    }
+
+    const bombTimer = setTimeout(destroy, 5000);
+
+    window.addEventListener("click", function () {
+      console.log("You clicked, you saved the world");
+      clearTimeout(bombTimer);
+    });
+
+    function emodji() {
+      console.log(`💩`);
+      console.log("Hehehe");
+    }
+
+    const poopInterval = setInterval(emodji, 1000);
+
+    setTimeout(() => {
+      clearInterval(poopInterval);
+    }, 10000);
+  </script>
 </body>
 
 </html>
