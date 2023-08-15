@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <script src="https://unpkg.com/lodash@4.17.21/lodash.js"></script>
   <script>
     // "use strict"
     // Напишіть код, виконавши завдання з кожного пункту окремим рядком:
@@ -61,7 +62,7 @@
     let menu = {
       width: 200,
       height: 300,
-      title: "Моє меню"
+      title: "Моє меню",
     };
 
     // multiplyNumeric(menu);
@@ -156,10 +157,10 @@
     const sarahFroze = Object.freeze(sarah);
     // console.log(sarahFroze);
     // sarahFroze.age = 7;
-    const propertyToCheck = prompt("Which property do you want to check?");
-    console.log(propertyToCheck);
-    console.log(sarah[propertyToCheck]);
-    console.log(sarah.propertyToCheck);
+    // const propertyToCheck = prompt("Which property do you want to check?");
+    // console.log(propertyToCheck);
+    // console.log(sarah[propertyToCheck]);
+    // console.log(sarah.propertyToCheck);
     // console.log(sarahFroze); // age still is 6. Object.freez() makes immutable obj.
 
     let person1 = {
@@ -170,11 +171,73 @@
     let person2 = {
       name: "Peter",
       age: 77,
+      animals: {
+        cats: 2,
+        dogs: 1,
+        rabbit: 1,
+        birds: 4,
+      }
     }
 
     let person3 = person1;
     console.log(person3 === person1); // true
     person3.first = "Larry";
+    console.log(person3.first);
+    console.log(person1.first);
+
+    // const person4 = { ...person2 };
+    const person4 = _.cloneDeep(person2);
+    person4.age = 23;
+    console.log(person4.age);
+    console.log(person2.age);
+    person4.animals.birds = 0;
+    console.log(person4.animals.birds);
+    console.log(person2.animals.birds);
+
+    const person5 = Object.assign({}, person1);
+    person5.name = "Vera";
+    console.log(person5.name);
+    console.log(person1.name);
+
+    const meatInventory = {
+      bacons: 3,
+      sausages: 10,
+      oyster: 15
+    }
+
+    const veggieInventory = {
+      tomatoes: 3,
+      onions: 5,
+      carrots: 1,
+      oyster: 3,
+    }
+
+    const inventory = {
+      ...meatInventory,
+      ...veggieInventory, // oyster: 3 - the order of the spread does matter
+      banana: 5,
+      apples: 30,
+      oranges: 3,
+      strawberries: 100,
+    }
+
+    function doStuff(data) {
+      return data = "Something else";
+    }
+
+    doStuff(person1.name);
+
+    function updateInventory(data) {
+      return data.tomatoes += 100000;
+    }
+
+    updateInventory(inventory);
+
+    function updateAge(data) {
+      return data.age += 1;
+    }
+
+    updateAge(person4);
 
   </script>
 </body>
