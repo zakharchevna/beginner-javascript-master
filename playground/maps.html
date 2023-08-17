@@ -9,8 +9,69 @@
 </head>
 
 <body>
-  <script>
 
+  <ul class="prizes"></ul>
+
+  <script>
+    const myMap = new Map();
+    myMap.set("name", "Sarah");
+    console.log(myMap);
+    myMap.age = 6;
+    myMap.birthDay = "17.01.2017";
+    myMap.set("isSick", true);
+
+    const familyMember = {
+      name: "Sarah",
+      age: 6,
+      whoIs: "rabbit",
+      color: ["orange", "white", "black"],
+    }
+
+    myMap.set(familyMember, "Passed away on 31.12.2023");
+    console.log(myMap);
+
+    myMap.get(familyMember);
+
+    const score = 100;
+    const prizes = new Map();
+
+    prizes.set(100, "Bear");
+    prizes.set(200, "Cat");
+    prizes.set(300, "Frog");
+
+    console.log(`You win ${prizes.get(score)}`);
+    console.log(myMap.size);
+
+    const ul = document.querySelector(".prizes");
+
+    prizes.forEach(entry => {
+      console.log(entry);
+    });
+
+    for (const prize of prizes) {
+      console.log(prize[0], prize[1]);
+    }
+
+    for (const [points, prize] of prizes) {
+      const li = `<li>${points} - ${prize}</li>`;
+      ul.insertAdjacentHTML("beforeend", li);
+    }
+
+    const mapExample = new Map([["name", "wes"], ["age", "45"]]);
+    mapExample.delete('age');
+    console.log(mapExample);
+
+    const objForJson = {
+      day: "Thursday",
+      month: "August",
+    }
+
+    const stringFromObj = JSON.stringify(objForJson);
+    console.log(stringFromObj);
+    console.log(typeof stringFromObj);
+    console.log(typeof objForJson);
+    const objFromString = JSON.parse(stringFromObj);
+    console.log(objFromString);
   </script>
 </body>
 
