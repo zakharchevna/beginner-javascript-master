@@ -36,7 +36,7 @@
       { comment: 'Horrible Service', rating: 2 },
       { comment: 'Smoothies are great, liked the burger too', rating: 5 },
       { comment: 'Ambiance needs work', rating: 3 },
-      { comment: 'I DONT LIKE BURGERS', rating: 1 },
+      { comment: 'I DO NOT LIKE BURGERS', rating: 1 },
     ];
 
 
@@ -46,11 +46,63 @@
 
     // Array.of();
 
+    const mood = Array.of("My", "day", "is", "wonderful");
+    console.log(mood);
+
+    const aliceArr = Array.of(..."Alice");
+    console.log(aliceArr);
+
+
+    const jsArr = Array.from({ length: 10 }, function () {
+      return 'JavaScript';
+    });
+    console.log(jsArr);
+
     // Make a function that creates a range from x to y with Array.from();
+
+    function createRange(start, end) {
+      const range = Array.from(
+        { length: end - start + 1 },
+        (_, index) => {
+          return index + start;
+        }
+      );
+      return range;
+      console.log(range);
+    }
+
+    createRange(1, 7);
+    const myRange = createRange(5, 17);
+    const anyRange = createRange(2, 35);
+    console.log(anyRange);
 
     // Check if the last array you created is really an array with Array.isArray();
 
+    console.log(Array.isArray(myRange));
+    console.log(Array.isArray(anyRange));
+    console.log(Array.isArray(buns));
+    console.log(Array.isArray(prices));
+    console.log(Array.isArray(mood));
+
+
     // Take the meats object and make three arrays with Object.entries(), Object.keys, Object.values()
+
+    const meatsArr = Object.entries(meats);
+    console.log(meatsArr);
+    const meatsKeysArr = Object.keys(meats);
+    console.log(meatsKeysArr);
+    const meatsValuesArr = Object.values(meats);
+    console.log(meatsValuesArr);
+
+    meatsValuesArr.forEach(qty => { console.log(qty) });
+    meatsKeysArr.forEach(key => { console.log(key) });
+    meatsArr.forEach(([meat, qty]) => {
+      // const key = entry[0];
+      // const value = entry[1];
+      //const [key, value] = entry;
+      console.log(meat, qty);
+    });
+
 
     /*
       Instance Methods
