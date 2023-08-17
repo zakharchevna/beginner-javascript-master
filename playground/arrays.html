@@ -11,7 +11,95 @@
 </head>
 
 <body>
+  <script>
+    const names = ["kit", "lit", "swit", "jack", "black"];
+    const colors = new Array();
+    console.log(Array.isArray(colors), Array.isArray(names));
+    console.log(names[1]);
+    console.log(names[names.length - 1]);
 
+    // Mutative methods
+    const numbers = ['1', '2', '3', '4', '5'];
+    console.log(numbers);
+    // numbers.reverse();
+    // const numbersBackwords = numbers.reverse();
+    const numbersReverse = [...numbers].reverse();
+    console.log(numbersReverse);
+
+    const rainbowColors = ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red'].reverse();
+    const favouriteColors = rainbowColors.slice(3, 6);
+    console.log(favouriteColors);
+
+    names.push("lucky");
+    console.log(names);
+    names.shift();
+    console.log(names);
+    names.unshift("loopy");
+    console.log(names);
+    names.pop();
+    console.log(names);
+
+    const bikes = ["bianchi", "miele", "panasonic", "miyata"];
+    const newBikes = [
+      ...bikes.slice(0, 2),
+      "moto",
+      ...bikes.slice(2),
+    ];
+    console.log(newBikes);
+
+    const newBikes2 = [
+      ...newBikes.slice(0, 3),
+      ...newBikes.slice(4),
+    ];
+    console.log(newBikes2);
+
+    const comments = [
+      { id: 1, text: "Nice service" },
+      { id: 2, text: "Good" },
+      { id: 3, text: "I am happy" },
+      { id: 4, text: "Such a great day" },
+      { id: 5, text: "I love coding" },
+    ];
+    function deleteComment(id, arr) {
+      const commentIndex = comments.findIndex(comment => comment.id === id);
+      return [
+        ...comments.slice(0, commentIndex),
+        ...comments.slice(commentIndex + 1)
+      ]
+    }
+
+    const motoIndex = newBikes2.findIndex(name => {
+      if (name === "moto") {
+        return true;
+      }
+      else {
+        return false;
+      }
+    });
+
+    console.log(motoIndex);
+    console.log(newBikes2[motoIndex]);
+
+    // const motoIdx = newBikes.findIndex(index => {
+    //   return index === "moto";
+    // });
+
+    const motoIdx = newBikes.findIndex(index => index === "moto");
+
+    console.log(motoIdx);
+    console.log(newBikes[motoIdx]);
+
+    // const newBikesWithOutMoto = [
+    //   ...newBikes2.slice(0, motoIdx),
+    //   ...newBikes2.slice(motoIdx + 1),
+    // ];
+
+    const newBikesWithOutMoto = [
+      newBikes2.slice(0, motoIdx),
+      newBikes2.slice(motoIdx + 1),
+    ].flat();
+    console.log(newBikesWithOutMoto);
+  </script>
 </body>
 
 </html>
