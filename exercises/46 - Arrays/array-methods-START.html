@@ -109,23 +109,60 @@
     */
 
     // Display all bun types with " or " - use join()
+    // console.log(buns.join(' or '));
+
+    const bunsOr = buns.join(' or ');
+    console.log(bunsOr);
 
     // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a string
 
+    const str = 'hot dogs,hamburgers,sausages,corn';
+    const strToArr = str.split(',');
+    console.log(strToArr);
+
     // take the last item off toppings with pop()
+    console.log(toppings);
+    const lastItem = toppings.pop();
+    console.log(lastItem);
     // add it back with push()
+    toppings.push(lastItem);
+    console.log(toppings);
     // take the first item off toppings with shift()
+    const firstItem = toppings.shift();
     // add it back in with unshift()
+    toppings.unshift(firstItem);
     // Do the last four,but immutable (with spreads and new variables)
+    let newToppings = toppings.slice(0, toppings.length - 1);
+    const cheeseItem = toppings.slice(toppings.length - 1)[0];
+    console.log(newToppings);
+
+    newToppings = [...newToppings, cheeseItem];
+
+
+    const mushroomsItem = toppings.slice(0, 1)[0];
+    newToppings = toppings.slice(1, toppings.length);
+    newToppings = [mushroomsItem, ...newToppings];
 
 
     // Make a copy of the toppings array with slice()
+    const toppingsCopy = toppings.slice(0);
     // Make a copy of the toppings array with a spread
+    let copyOfToppings = [...toppings];
     // take out items 3 to 5 of your new toppings array with splice()
+    copyOfToppings.splice(3, 3);
     // find the index of Avocado with indexOf() / lastIndexOf()
+    const avoIndex = toppings.indexOf('Avocado');
     // Check if hot sauce is in the toppings with includes()
+    const isInToppings = newToppings.includes('Hot Sauce');
     // add it if it's not
+    if (!isInToppings) {
+      // newToppings.push("Hot Sauce");
+      newToppings = [...newToppings, 'Hot Sauce'];
+    }
     // flip those toppings around with reverse()
+
+    toppings.reverse();
+    const toppingsReversed = [...newToppings].reverse();
 
     /*
       Callback Methods
