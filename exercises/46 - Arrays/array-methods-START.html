@@ -37,6 +37,7 @@
       { comment: 'Smoothies are great, liked the burger too', rating: 5 },
       { comment: 'Ambiance needs work', rating: 3 },
       { comment: 'I DO NOT LIKE BURGERS', rating: 1 },
+      { comment: 'Everything was awful', rating: 1 },
     ];
 
 
@@ -169,13 +170,66 @@
     */
 
     // find the first rating that talks about a burger with find()
+    // function findBurgRating(singleFeedback) {
+    //   return singleFeedback.comment.includes('burg');
+    // }
+
+    // const util = {
+    //   findBurgRating: (singleFeedback) => singleFeedback.comment.includes('burg'),
+    //   findSmoothieRating: (singleFeedback) => singleFeedback.comment.includes('Smoothie'),
+    // }
+    // const burgRating = feedback.find(util.findBurgRating);
+    // const smoothieRating = feedback.find(util.findSmoothieRating);
+
+    function findByWord(word) {
+      return function (singleFeedback) {
+        return singleFeedback.comment.includes(word);
+      }
+    }
+
+    function filterByMinRating(minRating) {
+      return function (singleFeedback) {
+        return singleFeedback.rating > minRating;
+      }
+    }
+
+    const burgRating = feedback.find(findByWord('burg'));
+    const smoothieRating = feedback.find(findByWord('Smoothie'));
+    console.log(smoothieRating);
+    console.log(burgRating);
     // find all ratings that are above 2 with filter()
+
+    const goodRatings = feedback.filter(filterByMinRating(2));
+    console.table(goodRatings);
+
+
     // find all ratings that talk about a burger with filter()
+
+
+
+    const burgerRatings = feedback.filter(findByWord('burg'));
+    console.table(burgerRatings);
     // Remove the one star rating however you like!
 
+    const badRatings = feedback.filter(single => single.rating === 1);
+    console.table(badRatings);
+
+    const legitRatings = feedback.filter(single => single.rating !== 1);
+    console.table(legitRatings);
+
     // check if there is at least 5 of one type of meat with some()
+
+    const isThereEnoughOfAtLeastOneMeat = Object.values(meats).some(meatValue => meatValue >= 5);
+    console.log(isThereEnoughOfAtLeastOneMeat);
     // make sure we have at least 3 of every meat with every()
+
+    const isThereEnoughOfEveryMeat = Object.values(meats).every(
+      meat => meat >= 7
+    );
+
+    console.log(isThereEnoughOfEveryMeat);
     // sort the toppings alphabetically with sort()
+    const toppingsSorted = toppings.sort();
     // sort the order totals from most expensive to least with .sort()
     // Sort the prices with sort()
 
