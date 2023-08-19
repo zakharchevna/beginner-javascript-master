@@ -121,6 +121,54 @@
     const strToArr = str.split(',');
     console.log(strToArr);
 
+    // function splitAndMerge(str, separator) {
+
+    //   const words = str.split(' ');
+
+    //   for (let i = 0; i < words.length; i++) {
+    //     const characters = words[i].split('');
+    //     words[i] = characters.join(separator);
+    //   }
+
+    //   return words.join(' ');
+    // }
+
+
+    function getLength(arr) {
+
+      return arr.length;
+    }
+
+    function getFirst(arr) {
+
+      return arr[0];
+    }
+
+    function getLast(arr) {
+
+      return arr[arr.length - 1];
+    }
+
+    function pushElement(arr) {
+
+      var el = 1;
+      arr.push(el);
+      return arr;
+    }
+
+    function popElement(arr) {
+
+      arr.pop();
+
+      return arr;
+    }
+
+    function animal(obj) {
+      return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
+    }
+
+
+
     // take the last item off toppings with pop()
     console.log(toppings);
     const lastItem = toppings.pop();
