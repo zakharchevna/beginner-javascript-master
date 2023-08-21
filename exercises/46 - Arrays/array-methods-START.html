@@ -121,51 +121,6 @@
     const strToArr = str.split(',');
     console.log(strToArr);
 
-    // function splitAndMerge(str, separator) {
-
-    //   const words = str.split(' ');
-
-    //   for (let i = 0; i < words.length; i++) {
-    //     const characters = words[i].split('');
-    //     words[i] = characters.join(separator);
-    //   }
-
-    //   return words.join(' ');
-    // }
-
-
-    function getLength(arr) {
-
-      return arr.length;
-    }
-
-    function getFirst(arr) {
-
-      return arr[0];
-    }
-
-    function getLast(arr) {
-
-      return arr[arr.length - 1];
-    }
-
-    function pushElement(arr) {
-
-      var el = 1;
-      arr.push(el);
-      return arr;
-    }
-
-    function popElement(arr) {
-
-      arr.pop();
-
-      return arr;
-    }
-
-    function animal(obj) {
-      return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
-    }
 
 
 
@@ -274,13 +229,99 @@
     const isThereEnoughOfEveryMeat = Object.values(meats).every(
       meat => meat >= 7
     );
-
     console.log(isThereEnoughOfEveryMeat);
+
+    // Create a copy of an array using .slice().
+
+    const flowers = ["Rose", "Tulip", "Orchid", "Peony", "Lily"];
+
+    const flowersCopy = [...flowers];
+    flowersCopy[0] = "Fuchsia";
+    flowersCopy.reverse();
+
+    const flowers2 = flowers.slice(0);
+    flowers2[flowers2.length - 1] = "Jasmine";
+    flowers2.reverse();
+    flowers2.push("Lotos");
+    flowers2.splice(2, 1);
+
+
+    console.log("This is flowersCopy " + flowersCopy);
+    console.log("This is flowers " + flowers);
+    console.log("This is flowers2 " + flowers2);
+
+
+    // Task
+    // Implement a function which accepts 2 arguments: string and separator.
+
+    // The expected algorithm: split the string into words by spaces, split each word into separate characters and join them back with the specified separator, join all the resulting "words" back into a sentence with spaces.
+
+    function splitAndMerge(str, separator) {
+
+      const words = str.split(' ');
+
+      for (let i = 0; i < words.length; i++) {
+        const characters = words[i].split('');
+        console.log(characters);
+        console.log(words);
+        words[i] = characters.join(separator);
+      }
+
+      return words.join(' ');
+    }
+
+    splitAndMerge("This is test string", "/");
+
+
+    function getLength(arr) {
+      return arr.length;
+    }
+
+    function getFirst(arr) {
+      return arr[0];
+    }
+
+    function getLast(arr) {
+      return arr[arr.length - 1];
+    }
+
+    function pushElement(arr) {
+      var el = 1;
+      arr.push(el);
+      return arr;
+    }
+
+    function popElement(arr) {
+      arr.pop();
+      return arr;
+    }
+
+    function animal(obj) {
+      return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
+    }
+
+
+
     // sort the toppings alphabetically with sort()
     const toppingsSorted = toppings.sort();
     // sort the order totals from most expensive to least with .sort()
-    // Sort the prices with sort()
 
+    function sortTotalPrices(a, b) {
+      return a - b;
+    }
+
+    const orderTotalsSorted = [...orderTotals].sort(sortTotalPrices);
+    console.log(orderTotalsSorted);
+    // Sort the prices with sort()
+    const productSortedByPrice = Object.entries(prices).sort(function (a, b) {
+      console.log(a, b);
+      const aPrice = a[1];
+      const bPrice = b[1];
+      return aPrice - bPrice;
+    });
+
+    const sortedPrices = Object.fromEntries(productSortedByPrice);
+    console.table(sortedPrices);
     /*
       Looping Methods (next)
     */
