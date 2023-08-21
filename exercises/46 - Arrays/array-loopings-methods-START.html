@@ -125,9 +125,41 @@
     ];
 
 
+
     /*
-      Looping Methods
+    Looping Methods
     */
+
+    const toyBox = ["Teddy Bear", "Ball", "Puzzle"];  // this is my toy box where I have 3 toys inside.
+
+    const bearName = toyBox.join("  ").split(" ")[0];
+    console.log(bearName);
+
+    toyBox.forEach((toy, i) => toyBox[i] = "Hello " + toy);
+    console.log(toyBox);
+
+    toppings.forEach((topping, i, array) => {
+      console.log(topping, i, array);
+      console.log(topping);
+      const nextTopping = array[i + 1];
+      const prevTopping = array[i - 1];
+
+      nextTopping ? console.log(nextTopping) : null;
+      prevTopping ? console.log(prevTopping) : null;
+
+      index === array.length - 1
+        ? console.log("Goodbye")
+        : console.log("Getting the next topping")
+
+    });
+
+
+    // log the topping
+    // toppings.forEach((topping) => console.log(topping));
+  // log the next topping if there is one
+
+  // log the previous topping if there is one
+  // if it's the last item in the array, log "goodbye"
 
   </script>
 </body>
