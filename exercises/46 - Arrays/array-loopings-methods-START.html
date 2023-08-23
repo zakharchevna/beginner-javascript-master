@@ -11,6 +11,11 @@
 </head>
 
 <body>
+  <section class="blogs">
+    <div id="blog-list">
+
+    </div>
+  </section>
   <script>
     const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado', 'Chiles', 'Bacon', 'Pickles', 'Onions', 'Cheese'];
 
@@ -256,6 +261,74 @@
     const student3 = students.filter(findById("565a")); // returned an array of the matched object
     console.log(student3);
 
+
+    console.clear();
+
+
+    let total = 0;
+
+    console.log(total);
+    orderTotals.forEach(singleTotal => total += singleTotal);
+
+    orderTotals.push(1000);
+    console.log(orderTotals);
+    console.log(total);
+
+
+    function tallyNumbers(tally, currentTotal) {
+      console.log(`The current tally is: ${tally}`);
+      console.log(`The current total is ${currentTotal}`);
+      console.log("**********************************");
+      return tally + currentTotal;
+    }
+
+
+    const allOrders = orderTotals.reduce(tallyNumbers, 0);
+    console.log(allOrders);
+
+    function inventoryReducer(totals, item) {
+      console.log(`Looping over ${item.type}`);
+      // totals.shirt += 1;
+      // totals.shirt ? (totals.shirt += 1) : (totals.shirt = 1);
+      totals[item.type] = totals[item.type] + 1 || 1;
+      console.log('ôő ôő ôő ôő ôő ôő ôő ôő ôő ôő ôő');
+      return totals;
+    }
+
+    const inventoryCount = inventory.reduce(inventoryReducer, {});
+    console.log(inventoryCount);
+
+    const totalInventoryPrice = inventory.reduce((acc, item) => acc + item.price, 0);
+    console.log(`The total price is ${totalInventoryPrice}`);
+
+
+    const words = ["apple", "banana", "cherry", "date"];
+    const longestWord = words.reduce((longest, current) => {
+      return current.length > longest.length ? current : longest;
+    }, "");
+
+    console.log(longestWord); // Output: "banana"
+
+    const colors = ["red", "green", "blue"];
+    const combined = colors.reduce((result, color) => {
+      return result + " " + color;
+    }, "");
+
+    console.log(combined); // Output: "red green blue"
+
+    // valuable example from ChatGPT
+    const blogPosts = [
+      { title: "Introduction to JavaScript", date: "2023-07-01" },
+      { title: "CSS Styling Tips", date: "2023-07-05" },
+      { title: "Responsive Web Design", date: "2023-07-10" }
+    ];
+
+    const blogList = blogPosts.reduce((html, post) => {
+      return html + `<li>${post.title} - ${post.date}</li>`;
+    }, "");
+
+    const blogListContainer = document.getElementById("blog-list");
+    blogListContainer.innerHTML = `<ul>${blogList}</ul>`;
 
   </script>
 </body>
