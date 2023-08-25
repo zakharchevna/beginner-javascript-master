@@ -9,7 +9,65 @@
 </head>
 
 <body>
+  <script>
+    // const num1 = +prompt('num1?', '');
+    // const num2 = +prompt('num2?', '');
+    // alert(num1 + num2);
 
+    function ucFirst(str) {
+      if (!str) return str;
+      const newStr = str[0].toUpperCase() + str.slice(1);
+      return newStr;
+    }
+
+    console.log(ucFirst("olha"))
+
+    function checkSpam(str) {
+      const lowerStr = str.toLowerCase();
+      return lowerStr.includes('viagra') || str.includes('xxx');
+    }
+
+    console.log(checkSpam('buy viagra now'));
+    console.log(checkSpam('buy Viagra now'));
+    console.log(checkSpam('here xxx'));
+    console.log(checkSpam('here'));
+
+    function truncate(str, maxLength) {
+      if (str.length > maxLength) {
+        str.slice(maxLength)
+        const strWithDots = str.slice(0, maxLength) + '…';
+        return strWithDots;
+      }
+    }
+
+    function truncate1(str, maxlength) {
+      return (str.length > maxlength) ?
+        str.slice(0, maxlength - 1) + '…' : str;
+    }
+
+    console.log(truncate('I love you guys', 10));
+
+    // function extractCurrencyValue(str) {
+    //   const newStr = str.replace(/[^0-9]/g, '');
+    //   return newStr;
+    //   return +str.slice(1);
+    // }
+
+    function extractCurrencyValue(str) {
+
+      let result = "";
+
+      for (let value of str) {
+        if (!isNaN(+value)) {
+          result += value;
+          console.log(typeof +result);
+        }
+      }
+      return +result;
+    }
+
+    console.log(extractCurrencyValue('$10'));
+  </script>
 </body>
 
 </html>
