@@ -27,10 +27,64 @@
     console.log(numbers)
 
     // For of
-
+    for (const number of numbers) {
+      console.log(number);
+    }
     // For in
+    for (const number in numbers) {
+      console.log(number);
+    }
+
+    const laptop = {
+      cost: 1000,
+      color: 'black',
+      model: 'Some nice model',
+      size: 'A pretty big one',
+      isNew: false,
+    }
+
+    for (prop in laptop) {
+      console.log(prop);
+    }
+
+    console.log(Object.keys(laptop));
+
+    const baseHumanStats = {
+      eyes: 2,
+      legs: 2,
+      arms: 2,
+      head: 1,
+      brain: 1,
+    }
+
+    function Human(name) {
+      this.name = name;
+    }
+
+
+    Human.prototype = baseHumanStats;
+    const wes = new Human('wes');
+    console.log(wes);
+
+    for (prop in wes) {
+      console.log(prop)
+    }
+
+    console.log(Object.entries(wes));
+
 
     // While Loop
+
+    let cool = true;
+    let i = 1;
+    while (cool) {
+      console.log('you are cool');
+      i++;
+      i > 100 ? cool = false : null;
+    }
+
+
+
   </script>
 </body>
 
