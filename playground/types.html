@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <script src="./types-FINISHED.js"></script>
   <script>
     // const num1 = +prompt('num1?', '');
     // const num2 = +prompt('num2?', '');
@@ -67,6 +68,33 @@
     }
 
     console.log(extractCurrencyValue('$10'));
+
+    const styles = ['Jazz', 'Blues'];
+    styles.push('Rock-n-Roll');
+    if (styles.length % 2 !== 0) {
+      styles[Math.round((styles.length - 1) / 2)] = 'Classics';
+    }
+    console.log(styles);
+
+    console.log(styles.shift());
+    styles.unshift('Rap', 'Reggae');
+    console.log(styles);
+
+    function getMaxSubSum(arr) {
+      let maxSum = arr[0];
+      let currentSum = arr[0];
+
+      for (let i = 1; i < arr.length; i++) {
+        currentSum = Math.max(arr[i], currentSum + arr[i]);
+        maxSum = Math.max(maxSum, currentSum);
+      }
+
+      return maxSum;
+    }
+
+    console.log(getMaxSubSum([-1, 2, 3, -9]));
+    console.log(getMaxSubSum([2, -1, 2, 3, -9]));
+
   </script>
 </body>
 

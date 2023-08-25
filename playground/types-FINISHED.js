@@ -79,10 +79,26 @@ teller.last = null;
 
 */
 
-let isDrawing = false;
-let age = 18;
-const ofAge = age > 19;
-console.log(ofAge);
+// let isDrawing = false;
+// let age = 18;
+// const ofAge = age > 19;
+// console.log(ofAge);
 
-age = 100;
-let age2 = 100;
+// age = 100;
+// let age2 = 100;
+
+
+function getMaxSubSum(arr) {
+  let maxSum = arr[0];
+  let currentSum = arr[0];
+  
+  for (let i = 1; i < arr.length; i++) {
+    currentSum = Math.max(arr[i], currentSum + arr[i]);
+    maxSum = Math.max(maxSum, currentSum);
+  }
+  
+  return maxSum;
+}
+
+console.log(getMaxSubSum([-1, 2, 3, -9])); // Результат: 5
+console.log(getMaxSubSum([2, -1, 2, 3, -9])); // Результат: 6
