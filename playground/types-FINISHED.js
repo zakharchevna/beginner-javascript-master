@@ -189,7 +189,57 @@ function sortByAge(arr) {
 console.log(sortByAge(guests));
 
 
+let arrForShuffle = [1, 2, 3];
+
+function shuffle(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+
+
+console.log(shuffle(arrForShuffle));
+// arr = [3, 2, 1]
+
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)); // випадковий індекс від 0 до i
+
+    // поміняти елементи місцями
+    // ми використовуємо для цього синтаксис "деструктивне присвоєння"
+    // докладніше про нього - в наступних розділах
+    // те ж саме можна записати як:
+    // let t = array[i]; array[i] = array[j]; array[j] = t
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 
 
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// підрахунок імовірності для всіх можливих варіантів
+let count = {
+  '123': 0,
+  '132': 0,
+  '213': 0,
+  '231': 0,
+  '321': 0,
+  '312': 0
+};
+
+for (let i = 0; i < 1000000; i++) {
+  let array = [1, 2, 3];
+  shuffle(array);
+  count[array.join('')]++;
+}
+
+// показати кількість всіх можливих варіантів
+for (let key in count) {
+  console.log(`${key}: ${count[key]}`);
+}
 
