@@ -102,3 +102,94 @@ function getMaxSubSum(arr) {
 
 console.log(getMaxSubSum([-1, 2, 3, -9])); // Результат: 5
 console.log(getMaxSubSum([2, -1, 2, 3, -9])); // Результат: 6
+
+// [1, -2, 15, 2, 0, 8].sort(function(a, b) {
+//   alert( a + " <> " + b );
+//   return a - b;
+// });
+
+
+
+
+function camelize(str) {
+  return str
+  .split('*')
+  .map((word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1))
+  .join("");
+}
+
+console.log(camelize("go*to*school"));
+
+// function filterRange(arr, a, b) {
+//   const filteredArr = arr.filter((value) => value >= a && value <= b);
+//   console.log(arr);
+//   return filteredArr;
+// }
+
+// console.log(filterRange([], 3, 15));
+let arr = [4, 1, 9, 45, 3, 2, 1, 9, 45, 3, 2, 8, 5, 34];
+function filterRangeInPlace(arr, a, b) {
+  const filteredArr = arr.filter(value => value >= a && value <= b);
+  arr.splice(0, arr.length, ...filteredArr);
+}
+
+filterRangeInPlace(arr, 3, 35);
+console.log(arr);
+
+let arrForSort = [5, 2, 1, -10, 8];
+arrForSort.sort((a, b) => b - a )
+console.log(arrForSort);
+
+let arrForSorting = ["HTML", "JavaScript", "CSS"];
+
+function copySorted(arr) {
+  return [...arr].sort();
+}
+
+let sorted = copySorted(arrForSorting);
+console.log(sorted);
+console.log(arrForSorting);
+
+let ivan = { name: "Іван", age: 25 };
+let petro = { name: "Петро", age: 30 };
+let mariya = { name: "Марія", age: 28 };
+
+let users = [ ivan, petro, mariya ];
+
+let names = [];
+users.forEach((user) => names.push(user.name));
+// let names = users.map(item => item.name);
+
+console.log(names);
+
+let joahn = { name: "Іван", surname: "Іванко", id: 1 };
+let peter= { name: "Петро", surname: "Петренко", id: 2 };
+let mary = { name: "Марія", surname: "Мрійко", id: 3 };
+
+let users2 = [ joahn, peter, mary ];
+
+let usersMapped = users2.map((user) => ({
+    fullName: `${user.name} ${user.surname}`, 
+    id: user.id
+  })
+)
+
+let ola = { name: "Іван", age: 25 };
+let maks = { name: "Петро", age: 30 };
+let leokadia = { name: "Марія", age: 70 };
+
+let guests = [ leokadia, maks, ola ];
+
+
+function sortByAge(arr) {
+  return arr.map(item => item.age).sort((a, b) => a - b);
+  // arr.sort((a, b) => a.age - b.age);
+}
+
+console.log(sortByAge(guests));
+
+
+
+
+
+
