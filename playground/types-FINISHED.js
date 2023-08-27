@@ -195,7 +195,6 @@ function shuffle(arr) {
   return arr.sort(() => Math.random() - 0.5);
 }
 
-
 console.log(shuffle(arrForShuffle));
 // arr = [3, 2, 1]
 
@@ -243,3 +242,44 @@ for (let key in count) {
   console.log(`${key}: ${count[key]}`);
 }
 
+
+let john = { name: "John", age: 38 };
+let pete = { name: "Pete", age: 30 };
+let mare = { name: "Mary", age: 55 };
+
+let array = [ john, pete, mare ];
+
+function getAverageAge(arr) {
+  return arr
+  .map(item => item.age)
+  .reduce((sum, item) => sum + item / arr.length
+  , 0)
+}
+
+console.log(getAverageAge(array));
+
+
+function unique(arr) {
+  return arr.reduce((uniqueArr, currentStr) => {
+    if (!uniqueArr.includes(currentStr)) {
+      uniqueArr.push(currentStr);
+    }
+    return uniqueArr;
+  }, []);
+}
+
+
+console.log(unique(strings))
+
+function unique(arr) {
+  const uniqueObj = {};
+  arr.forEach(item => {
+    uniqueObj[item] = true;
+  });
+  return Object.keys(uniqueObj);
+}
+
+let strings2 = ["Привіт", "Світ", "Привіт", "Світ", "Привіт", "Привіт", "Світ", "Світ", ":-O"];
+
+
+// getAverageAge(array);
