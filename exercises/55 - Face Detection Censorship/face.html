@@ -5,16 +5,25 @@
   <meta charset="UTF-8">
   <title>Censorship</title>
   <link rel="stylesheet" href="../../base.css">
+
 </head>
 
 <body>
+  <div class="controls">
+    <label for="SCALE">
+      SCALE:
+      <input id='SCALE' value="1.35" type="range" name="SCALE" min="0.3" max="3" step="0.1" />
+    </label>
+    <label for="SIZE">
+      SIZE:
+      <input id='SIZE' type="range" name="SIZE" min="1" max="100" step="1" value="10" />
+    </label>
+  </div>
   <div class="wrap">
     <video class="webcam"></video>
     <canvas class="video"></canvas>
     <canvas class="face"></canvas>
   </div>
-  <script src="./pixelated-face.js"></script>
-
   <style>
     * {
       box-sizing: border-box;
@@ -22,6 +31,16 @@
 
     body {
       margin: 0;
+    }
+
+    .controls {
+      color: #ffc600;
+      font-weight: bold;
+      padding-top: 5rem;
+      margin-bottom: 5px;
+      display: grid;
+      min-width: 300px;
+      place-items: center;
     }
 
     .wrap {
@@ -42,6 +61,7 @@
       position: absolute;
     }
   </style>
+  <script src="./pixelated-face.js"></script>
 
 </body>
 
