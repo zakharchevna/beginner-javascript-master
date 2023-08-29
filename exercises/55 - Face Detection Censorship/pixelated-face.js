@@ -37,6 +37,14 @@ async function detect() {
 }
 
 
+function drawFace(face) {
+  const { width, height, top, left } = face.boundingBox;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = "#ffc600";
+  ctx.lineWidth = 1;
+  ctx.strokeRect(left, top, width, height);
+  ctx.stroke();
+}
 
 function censor({ boundingBox: face }) {
   faceCtx.imageSmoothingEnabled = false;
@@ -74,14 +82,6 @@ function censor({ boundingBox: face }) {
     }
     
     
-    function drawFace(face) {
-      const { width, height, top, left } = face.boundingBox;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.strokeStyle = "#ffc600";
-      ctx.lineWidth = 1;
-      ctx.strokeRect(left, top, width, height);
-      ctx.stroke();
-    }
 
     const optionsInputs = document.querySelectorAll('.controls input[type="range"]');
     console.log(optionsInputs);

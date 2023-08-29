@@ -21,7 +21,7 @@
 153C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\core-js\actual\string\trim-right.js133376761507368838 0
 167C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest6.c133376761407706961 0
 146C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\@parcel\optimizer-terser\src133376761384983878 1
-109C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist133377233357300794 1
+109C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist133377654936609544 1
 146C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\css-select\lib\sort.d.ts.map133376761401768125 0
 150C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\core-js\es\date\to-gmt-string.js133376761504687295 0
 198C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\msgpackr-extract\build\Release\obj\msgpackr-extract\msgpackr-extract.node.recipe133376761691546355 0
@@ -55,7 +55,7 @@
 151C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\es-abstract\2020\SameValueZero.js133376761448583802 0
 137C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\mkdirp\package.json133376761387253799 0
 156C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\core-js\features\set\is-superset-of.js133376761482597518 0
-122C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\pixelated-face.js133377234319611945 0
+122C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\pixelated-face.js133377654935801773 0
 175C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\msgpackr-extract\prebuilds\linux-x64\node.abi72.musl.node133376761404446152 0
 149C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\core-js\actual\regexp\search.js133376761499015922 0
 161C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\highlight.js\styles\stackoverflow-light.css133376761408136952 0
@@ -77,7 +77,7 @@
 128C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\strip-ansi133376761388302804 1
 156C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\@parcel\transformer-babel\lib\utils.js133376761400409563 0
 153C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\postcss-modules-extract-imports\src133376761384333872 1
-114C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\face.html133377233356278664 0
+114C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\face.html133377632176920486 0
 168C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\htmlnano\lib\modules\deduplicateAttributeValues.js133376761394623457 0
 122C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\package-lock.json133376781731741397 0
 139C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\wcwidth\docs\index.md133376761393236800 0
@@ -7795,7 +7795,7 @@
 156C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\core-js\es\string\virtual\match-all.js133376761488882223 0
 167C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\es-abstract\2018\OrdinaryCreateFromConstructor.js133376761442775669 0
 163C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\es-abstract\2018\OrdinaryDefineOwnProperty.js133376761442905650 0
-119C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.html133377233357285946 0
+119C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.html133377632177916378 0
 160C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\es-abstract\2018\OrdinaryGetOwnProperty.js133376761443295990 0
 157C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\es-abstract\2018\OrdinaryHasInstance.js133376761443925667 0
 160C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\core-js\features\string\virtual\pad-end.js133376761490768262 0
@@ -8402,7 +8402,7 @@
 141C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\des.js\test\ede-test.js133376761395418575 0
 135C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\des.js\lib\des.js133376761393986612 0
 145C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\css-tree\lib\common\List.js133376761407776970 0
-126C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.78b1ac0f.js133377229482756820 0
+126C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.78b1ac0f.js133377654936576294 0
 144C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\define-properties\index.js133376761393156803 0
 159C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\command-exists\test\executable-script.cmd133376761384593907 0
 145C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\define-properties\README.md133376761394443469 0
@@ -11606,7 +11606,7 @@
 163C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\@parcel\transformer-css\lib\CSSTransformer.js133376761382983920 0
 151C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\@parcel\transformer-babel\LICENSE133376761380843598 0
 157C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\@parcel\transformer-babel\src\babel7.js133376761391420098 0
-127C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.3893b119.css133377023009606902 0
+127C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.3893b119.css133377624608573219 0
 157C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\@parcel\transformer-babel\src\config.js133376761395313460 0
 160C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\@parcel\transformer-babel\src\constants.js133376761397471579 0
 156C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\@parcel\transformer-babel\src\utils.js133376761400659538 0
@@ -12465,7 +12465,7 @@
 133C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\.bin\terser.ps1133376761513928525 0
 132C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\.bin\which.cmd133376761513918498 0
 132C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\node_modules\.bin\which.ps1133376761513918498 0
-131C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.3893b119.css.map133377023009638547 0
+131C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.3893b119.css.map133377624608603213 0
 126C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.662f819b.js133377043689487875 0
 130C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.662f819b.js.map133377043689510665 0
-130C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.78b1ac0f.js.map133377229482756820 0
+130C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\55 - Face Detection Censorship\dist\face.78b1ac0f.js.map133377654936596289 0
