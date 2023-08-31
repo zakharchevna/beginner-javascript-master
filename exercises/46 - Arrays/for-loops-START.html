@@ -83,6 +83,55 @@
       i > 100 ? cool = false : null;
     }
 
+    function filteredArray(arr, elem) {
+      let newArr = [];
+      // Only change code below this line
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+          if (arr[i][j] !== elem) {
+            newArr.push(arr[i])
+          }
+        }
+      }
+      // Only change code above this line
+      return newArr;
+    }
+
+    console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3))
+
+    let fiveLevelArray = [
+      [
+        [
+          ['deep',
+            ['deeper',
+              1, 2, 3, [
+                'deepest'
+              ]
+            ],
+            [
+              4, 5, 6
+            ]
+          ],
+          [
+            [
+              7, 8, 9
+            ],
+            [
+              10, 11, 12
+            ]
+          ]
+        ]
+      ]
+    ];
+
+
+    let myNestedArray = [
+      'level 1',                   /* myNestedArray[0]             */
+      ['level 2'],	               /* myNestedArray[1][0]          */
+      [['level 3', 'deep']],	       /* myNestedArray[2][0][0]       */
+      [[['level 4', 'deeper']]],    /* myNestedArray[3][0][0][0]    */
+      [[[['level 5', 'deepest']]]]  /* myNestedArray[4][0][0][0][0] */
+    ];
 
 
   </script>
