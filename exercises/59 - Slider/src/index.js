@@ -10,6 +10,7 @@ function Slider(slider) {
   const slides = slider.querySelector('.slides');
   const prevButton = slider.querySelector('.goToPrev');
   const nextButton = slider.querySelector('.goToNext');
+  console.dir(prevButton, nextButton)
   
   function startSlider() {
     current = slider.querySelector('.current') || slides.firstElementChild;
@@ -45,7 +46,10 @@ function Slider(slider) {
     }
     applyClasses();
   }
-  
+
+
+  prevButton.addEventListener('click', () => move('back'));
+  nextButton.addEventListener('click', move);
   // function handleKeyUp(e) {
   //   console.log(e.key)
   //   if(e.key === 'ArrowRight') {
@@ -54,18 +58,12 @@ function Slider(slider) {
   //     move('back');
   //   }
   // }
-
-
-  // prevButton.addEventListener('keyup', handleKeyUp);
-  // nextButton.addEventListener('keyup', handleKeyUp);
-  prevButton.addEventListener('click', () => move('back'));
-  nextButton.addEventListener('click', move);
-  
-  
   startSlider();
   applyClasses();
-
 }
 
 const slider = Slider(document.querySelector('.slider'));
 const dogSlider = Slider(document.querySelector('.dog-slider'));
+
+// dogSlider.addEventListener('keyup', handleKeyUp);
+
