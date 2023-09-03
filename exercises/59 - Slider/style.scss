@@ -1,7 +1,14 @@
+body {
+  background-color: rgb(201, 236, 113);
+  padding: 3rem;
+  scroll-behavior: smooth;
+  transition: all 0.5s ease;
+}
+
 .slides {
-  width: 800px;
-  height: 500px;
-  border:2px solid black;
+  width: 50vw;
+  height: 40vh;
+  border:2px solid rgb(31, 41, 129);
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -9,16 +16,17 @@
 
 .slide {
   position: absolute;
-  background: var(--pink);
+  padding: 5px;
+  background: rgb(53, 66, 125);
   height: 100%;
   width: 100%;
   display: grid;
   align-content: center;
   justify-content: center;
-  color: white;
+  color: rgb(174, 251, 249);
   font-size: 100px;
   font-family: sans-serif;
-  border: 5px solid white;
+  border: 5px solid rgb(191, 223, 243);
   transition: all .25s;
   transform: translateX(-200%);
 }
@@ -46,4 +54,8 @@
   gap: 2rem;
   justify-content: center;
   padding: 2rem;
+  & button {
+    background-color: #032b59;
+    color: #e0ecfb;
+  }
 }
