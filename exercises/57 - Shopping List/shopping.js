@@ -49,7 +49,6 @@ function deleteItem(id) {
 }
 
 function markAsComplete(id) {
-  console.log('checked');
   const refItem = items.find(item => item.id === id);
   console.log(refItem)
   refItem.complete = !refItem.complete;

@@ -56,7 +56,6 @@ function Gallery(gallery) {
   }
 
   function handleKeyUp(e) {
-    console.log(e.key + ' -> closing modal')
     if (e.key === 'Escape') return closeModal();
     if(e.key === 'ArrowRight') return showNextImage();
     if(e.key === 'ArrowLeft') return showPrevImage();

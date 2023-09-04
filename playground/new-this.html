@@ -9,7 +9,59 @@
 </head>
 
 <body>
+  <button class='one'><strong>1</strong></button>
+  <button class='two'><strong>2</strong></button>
+  <script>
+    console.log('it works');
+    const myDate = new Date('11 August 2023');
+    console.dir(myDate);
+    const names = ['Meras', 'Siddy', 'Kuit'];
+    console.log(typeof names)
+    console.log(names instanceof Array);
+    console.log(Array.isArray(names));
 
+    //     Both names instanceof Array and Array.isArray(names) are used to check if the names variable is an array, but they work slightly differently:
+
+    // names instanceof Array: This operator checks if the object on the left side of the instanceof operator (in this case, names) is an instance of the object on the right side (in this case, Array). It specifically checks if the object inherits from the Array prototype.
+
+    // Array.isArray(names): This is a utility function provided by JavaScript. It directly checks if the argument (in this case, names) is an array and returns a boolean value accordingly.
+
+    // In practice, both methods will often yield the same result. However, there is a subtle difference. If you're working in an environment where multiple global contexts are possible (like in a web page with frames or iframes), instanceof might not always work as expected because it checks the prototype chain. On the other hand, Array.isArray is more reliable for checking if a variable is an array because it directly examines the type of the variable.
+
+    // In most cases, you can use Array.isArray(names) as it's the recommended and more reliable way to check if a variable is an array in modern JavaScript.
+    function Pizza(toppings = [], customer) {
+      console.log(this);
+      this.toppings = toppings;
+      this.customer = customer;
+      this.id = Math.floor(Math.random() * 14810752).toString(16);
+      args = ['eggs', 'oil', 'becon', 'cheese']
+      const makePizza = args.map(arg => console.log(arg))
+      console.log('making pizza')
+      // return makePizza;
+    }
+
+    const tastyPizza1 = new Pizza(['tomato'], 'Geek');
+    const tastyPizza2 = new Pizza(['tomato', 'onion'], 'Peer');
+
+    console.log(tastyPizza1);
+    console.log(tastyPizza2);
+
+    const button1 = document.querySelector('.one');
+    const button2 = document.querySelector('.two');
+
+    function tellMeAboutButton() {
+      console.log('outside ', this);
+      setTimeout(() => {
+        console.log('inside ', this)
+        this.textContent += ' Good job'
+      },
+        1000
+      );
+    }
+
+    button1.addEventListener('click', tellMeAboutButton);
+    button2.addEventListener('click', tellMeAboutButton);
+  </script>
 </body>
 
 </html>
