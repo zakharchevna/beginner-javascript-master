@@ -34,20 +34,61 @@
       this.toppings = toppings;
       this.customer = customer;
       this.id = Math.floor(Math.random() * 14810752).toString(16);
-      args = ['eggs', 'oil', 'becon', 'cheese']
-      const makePizza = args.map(arg => console.log(arg))
+      this.slices = 10;
       console.log('making pizza')
       // return makePizza;
     }
 
+    Pizza.prototype.eat = function () {
+      if (this.slices >= 1) {
+        this.slices -= 1;
+        console.log(`Chomp you now have ${this.slices} left`);
+      } else {
+        console.log('Sorry, no slices left');
+      }
+      return this.slices;
+    }
+
+    Pizza.prototype.size = 'Large';
+
+    Pizza.prototype.describe = function () {
+      return `this pizza for ${this.customer} with the toppings ${this.toppings.join(', ')} and it has ${this.slices} slices left`;
+    }
+
+
+    const str = 'String for testing prototypes';
+
+
     const tastyPizza1 = new Pizza(['tomato'], 'Geek');
     const tastyPizza2 = new Pizza(['tomato', 'onion'], 'Peer');
+
+    console.log(tastyPizza1.describe());
+    tastyPizza1.eat();
+    tastyPizza1.eat();
+    tastyPizza1.eat();
+    console.log(tastyPizza1.describe());
+    console.log(tastyPizza2.describe());
 
     console.log(tastyPizza1);
     console.log(tastyPizza2);
 
+
+    String.prototype.sarcastic = function () {
+      const sarcastic = this.split('').map((char, i) => {
+        if (i % 2 === 0) {
+          return char.toUpperCase();
+        } else {
+          return char.toLowerCase();
+        }
+      }).join('')
+      return sarcastic;
+    }
+
+    console.log(str.sarcastic());
+
     const button1 = document.querySelector('.one');
     const button2 = document.querySelector('.two');
+
 
     function tellMeAboutButton() {
       console.log('outside ', this);
