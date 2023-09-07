@@ -9,7 +9,29 @@
 </head>
 
 <body>
+  <script>
+    const user = {
+      name: 'Greg',
+      sayHi() {
+        return `Hey ${this.name}`;
+      },
+    }
 
+    const flower = {
+      name: 'rose',
+      color: 'pink',
+    }
+
+    const order = {
+      name: 'pizza',
+    }
+    const sayHi = user.sayHi.bind(order)
+    console.log(user.sayHi());
+    console.log(sayHi());
+    console.log(user.sayHi.apply(flower));
+    console.log(user.sayHi.call(order));
+
+  </script>
 </body>
 
 </html>

@@ -269,8 +269,6 @@ function unique(arr) {
 }
 
 
-console.log(unique(strings))
-
 function unique(arr) {
   const uniqueObj = {};
   arr.forEach(item => {
@@ -281,5 +279,21 @@ function unique(arr) {
 
 let strings2 = ["Привіт", "Світ", "Привіт", "Світ", "Привіт", "Привіт", "Світ", "Світ", ":-O"];
 
+
+function findLongestWordLength(str) {
+  let arr = str.split(" ")
+  let longestWord = arr.reduce((acc, word) => {
+    debugger;
+    if(word.length > acc) {
+      return word.length
+    } else {
+      return acc;
+      }
+  }, 0)
+  console.log(longestWord)
+  return longestWord;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
 // getAverageAge(array);
