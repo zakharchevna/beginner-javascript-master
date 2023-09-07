@@ -115,3 +115,4 @@ const dogSlider = new Slider(document.querySelector('.dog-slider'));
 // dogSlider.arrowMove = function() {
 //   this.addEventListener('keyup', handleKeyUp);
 // }
+
