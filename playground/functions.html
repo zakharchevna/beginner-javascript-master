@@ -116,6 +116,28 @@
 
   <script>
     window.scrollTo(0, 600);
+    // The global variable
+    const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+    // Change code below this line
+    function add(bookName) {
+      const updateList = [...bookList];
+      updateList.push(bookName);
+      return updateList;
+
+      // Change code above this line
+    }
+    add('Peter Pen');
+    // Change code below this line
+    function remove(bookName) {
+      const book_index = bookList.indexOf(bookName);
+      const updateList = [...bookList];
+      if (book_index >= 0) {
+        updateList.splice(book_index, 1);
+        // Change code above this line
+      }
+      return updateList;
+    }
   </script>
 </body>
 
