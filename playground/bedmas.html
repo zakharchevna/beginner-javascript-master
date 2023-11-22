@@ -34,7 +34,71 @@
       return total;
     }
 
+    function rentalCarCost(d) {
+      const cost = 40;
+      const discount3Days = 0.2;
+      const discount7Days = 0.5;
+      const days = createRange(1, d);
+      let total = (days[days.length - 1] * cost);
+      if (d < 3) {
+        return total;
+      } else if (d >= 3 && d < 7) {
+        return total - (total * discount3Days);
+      } else if (d >= 7) {
+        return total - (total * discount7Days);
+      }
+    }
 
+    function createRange(start, end) {
+      const range = Array.from({ length: end - start + 1 }, function (item, index) {
+        return index + start;
+      });
+      return range;
+    }
+
+    console.log(rentalCarCost(7));
+
+
+    // function fearNotLetter(str) {
+    //   let diff;
+    //   let result;
+    //   const alphabet = /[a-z]/gi;
+    //   const strArr = str.match(alphabet);
+    //   const alphabetArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    //   const index = strArr.filter((item) => strArr.includes(item));
+    //   console.log(index)
+
+
+    //   return index;
+    // for (let i = 0; i < alphabetArr.length; i++) {
+    //   for (let j = 0; j < strArr.length; j++) {
+    //     if (strArr[j] !== alphabetArr[j]) {
+    //       diff = j !== i;
+    //       result = `${strArr[j]}`;
+    //     }
+    //     //alphabetArr.filter((item, index ) => index !== strArr.indexOf(strArr[i]));
+    //   }
+    // }
+    // const indexNextLetter = alphabetArr.indexOf(result);
+    // // console.log(alphabetArr.map((item, index) => index));
+    // // console.log(strArr.map((item, index) => index));
+    // return alphabetArr[indexNextLetter - 1];
+    //}
+
+    function fearNotLetter(str) {
+      var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+      var first = alphabet.indexOf(str[0]);
+      var last = alphabet.indexOf(str[str.length - 1]);
+      var alpha = alphabet.slice(first, last);
+
+      for (var i = 0; i < str.length; i++) {
+        if (str[i] !== alpha[i]) {
+          return alpha[i];
+        }
+      }
+    }
+
+    console.log(fearNotLetter("stvwx"));
   </script>
 </body>
 

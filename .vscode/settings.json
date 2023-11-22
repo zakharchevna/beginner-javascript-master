@@ -1,4 +1,6 @@
-// {
+{
+  "liveServer.settings.port": 5501
+} // {
 //   "eslint.format.enable": false,
 //   "eslint.lintTask.enable": false
 // }
