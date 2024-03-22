@@ -6,10 +6,130 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Promises</title>
   <link rel="stylesheet" href="../base.css">
+  <style>
+    body {
+      background: rgb(139, 188, 247);
+    }
+
+    .go {
+      display: grid;
+      place-items: center;
+      color: crimson;
+      font-weight: 700;
+      font-size: 2.3rem;
+      line-height: 1.3;
+      padding: 5rem;
+      margin: 15rem auto;
+      background-color: rgb(208, 244, 213);
+      transition: all 0.3s ease;
+      border-radius: 1.2rem;
+      width: 25vw;
+      height: 25vw;
+    }
+
+    .circle {
+      border-radius: 50%;
+    }
+
+    .change-colors {
+      background-color: crimson;
+      color: rgb(208, 244, 213);
+    }
+
+    .update-colors {
+      background-color: purple;
+      color: rgb(230, 201, 246);
+    }
+
+    .change-colors {
+      transition: all 3s ease-in;
+      backfade-outground-color: rgb(19, 87, 19);
+      /* background-color: rgb(106, 255, 0); */
+      /* opacity: 0.5; */
+      opacity: 0;
+    }
+  </style>
 </head>
 
 <body>
   <script>
+    const wait = (ms = 0) => new Promise(resolve => setTimeout(resolve, ms));
+
+    wait(200).then(() => {
+      console.log('Done!');
+    })
+
+    const go = document.querySelector('.go');
+
+    async function animate2(e) {
+      const el = e.currentTarget;
+      el.textContent = 'GO';
+      await wait(200);
+      el.classList.add('circle');
+      await wait(500);
+      el.classList.add('red');
+      await wait(250);
+      el.classList.remove('circle');
+      await wait(500);
+      el.classList.remove('red');
+      el.classList.add('purple');
+      await wait(500);
+      el.classList.add('fadeOut');
+    }
+
+    function animate(e) {
+      const el = e.currentTarget;
+      el.textContent = 'GO';
+      wait(200)
+        .then(() => {
+          el.classList.add('circle');
+          return wait(500);
+        })
+        .then(() => {
+          el.classList.add('change-colors');
+          return wait(250);
+        })
+        .then(() => {
+          el.classList.remove('circle');
+          return wait(500);
+        })
+        .then(() => {
+          el.classList.remove('change-colors');
+          el.classList.add('update-colors');
+          return wait(500);
+        })
+        .then(() => {
+          el.classList.add('fade-out');
+        })
+    }
+
+    go.addEventListener('click', animate2);
+
+    go.addEventListener('clickXXXX', function go(e) {
+      const el = e.currentTarget;
+      el.textContent = 'GO';
+      setTimeout(function () {
+        el.classList.add('circle');
+        setTimeout(function () {
+          el.classList.add('red');
+          setTimeout(function () {
+            el.classList.remove('circle');
+            setTimeout(function () {
+              el.classList.remove('red');
+              el.classList.add('purple');
+              setTimeout(function () {
+                el.classList.add('invisible');
+                setTimeout(function () {
+                  console.log('You have reacted the 7th layer of callback hell');
+                  el.classList.remove('invisible', 'purple');
+                }, 500);
+              }, 500);
+            }, 500);
+          }, 500)
+        }, 500)
+      }, 500)
+    });
+
 
   </script>
 </body>
