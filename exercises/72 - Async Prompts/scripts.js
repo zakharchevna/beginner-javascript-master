@@ -67,3 +67,34 @@ const buttons = document.querySelectorAll("[data-question]");
 console.log(buttons);
 
 buttons.forEach(button => button.addEventListener("click", askQuestion));
+
+const questions = [
+  {title: "What is your name?"},
+  {title: "What is your age", cancel: true},
+  {title: "What is your hobby?"},
+];
+
+// const qPromises = questions.map(ask);
+// console.log(qPromises);
+
+// Promise.all(questions.map(ask)).then(data => {
+//   console.log(data);
+// });
+
+async function asyncMap(array, callback) {
+  const results = [];
+
+  for(const data of array) {
+    const result = await callback(data);
+    results.push(result);
+  }
+
+  return results;
+}
+
+async function go() {
+  const answer = await asyncMap(questions, ask);
+  console.log(answer);
+}
+
+go();
