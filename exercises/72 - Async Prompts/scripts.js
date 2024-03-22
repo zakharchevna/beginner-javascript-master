@@ -1,3 +1,15 @@
+function wait(ms=0) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function destroyPopup(popup) {
+  popup.classList.remove("open");
+  await wait(1000);
+  popup.remove();
+  popup = null;
+}
+
+
 function ask(options) {
   return new Promise(async function(resolve) {
     // First we need to create a popup with all the fields in it
@@ -17,11 +29,14 @@ function ask(options) {
       cancelBtn.textContent = "Cancel";
       popup.firstElementChild.appendChild(cancelBtn);
       //TODO: Listen for a click on that btn
+      cancelBtn.addEventListener("click",
+        function() {
+          resolve(null);
+          destroyPopup(popup);
+        }, { once: true }
+      )
     }
     document.body.appendChild(popup);
-    function wait(ms=0) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
     await wait(50);
     popup.classList.add("open");
     // listen for the submit event on the inputs
@@ -29,6 +44,7 @@ function ask(options) {
       e.preventDefault();
       console.log("submitted!");
       resolve(e.target.input.value);
+      destroyPopup(popup);
     }, {once:true})
     // when someone does submit it, resolve the data that was in the input box!
     // insert that popup into the DOM
@@ -36,4 +52,18 @@ function ask(options) {
   });
 }  
 
-ask({ title: 'does this work' });
+async function askQuestion(e) {
+  const button = e.currentTarget;
+  const cancel = "cancel" in button.dataset;
+  console.log(button.dataset);
+  const answer = await ask({
+    title: button.dataset.question,
+    cancel
+  });
+  console.log(answer);
+}
+
+const buttons = document.querySelectorAll("[data-question]");
+console.log(buttons);
+
+buttons.forEach(button => button.addEventListener("click", askQuestion));
