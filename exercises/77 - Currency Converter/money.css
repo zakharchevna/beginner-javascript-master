@@ -1,4 +1,6 @@
-html, body {
+html,
+body {
+  background-color: rgb(140, 15, 140);
   background-color: #d0d0d0;
 }
 
@@ -16,7 +18,8 @@ body {
 }
 
 .app form {
-  border:0;
+  color: rgb(210, 247, 209);
+  border: 0;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-auto-rows: 1fr;
@@ -24,21 +27,21 @@ body {
   text-align: center;
   font-weight: 600;
   padding: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  grid-gap:2rem;
+  box-shadow: 0 0 10px rgb(184, 7, 184);
+  grid-gap: 2rem;
   align-items: stretch;
 }
 
-
 .app :is(button, input, select, textarea) {
-  margin:0;
+  color: rgb(210, 247, 209);
+  margin: 0;
   text-align: center;
   font-weight: 600;
-  border:0;
+  border: 0;
 }
 
 .app :is(button, input, select, textarea):focus {
-  outline-color: violet;
+  outline-color: rgb(184, 7, 184);
 }
 
 .app input {
@@ -47,15 +50,15 @@ body {
 
 .app select {
   background: none;
-  border:0;
+  border: 0;
   padding: 2rem;
 }
 
 .app form > * {
-  background: var(--yellow);
+  background: rgb(11, 165, 70);
   margin: 0;
   border-radius: 0;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   display: grid;
   align-content: center;
 }
