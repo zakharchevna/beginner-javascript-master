@@ -1,6 +1,5 @@
 html,
 body {
-  background-color: rgb(140, 15, 140);
   background-color: #d0d0d0;
 }
 
@@ -12,7 +11,16 @@ body {
   min-height: 100vh;
 }
 
+.title {
+  font-size: 4.7rem;
+  padding: 1rem;
+  text-align: center;
+  color: rgb(11, 165, 70);
+  margin-bottom: 1rem;
+}
+
 .app {
+  box-shadow: 0 0 10px rgb(184, 7, 184);
   max-width: 800px;
   background: white;
 }
@@ -27,7 +35,6 @@ body {
   text-align: center;
   font-weight: 600;
   padding: 2rem;
-  box-shadow: 0 0 10px rgb(184, 7, 184);
   grid-gap: 2rem;
   align-items: stretch;
 }
