@@ -4,11 +4,23 @@
   "description": "Practice npm modules",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html"
   },
   "author": "Olha Zakharchevna / Wes Bos",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
-  }
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "await-to-js": "^3.0.0",
+    "axios": "^1.6.8",
+    "date-fns": "^3.6.0",
+    "faker": "^6.6.6",
+    "lodash": "^4.17.21",
+    "waait": "^1.0.5"
+  },
+  "brotherslist": [
+    "last 1 chrome versions"
+  ]
 }
