@@ -9,7 +9,7 @@ const fakerData = document.querySelector(".faker-data");
 
 fakerData.innerHTML = `
   <p><strong>Random emoji generated with faker npm:</strong> ${fakeEmojiArr.join("")}</p>
-  <p><strong>Random persons generated with faker npm:</strong> ${fakePersons.join(", ")}</p>
+  <p><strong>Random persons generated with faker npm:</strong> <i>${fakePersons.join(", ")}</i></p>
 `;
 
 async function go() {
