@@ -12,7 +12,7 @@
 148C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\highlight.js\lib\languages\vim.js133561193176617634 0
 128C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\which\LICENSE133561193149780791 0
 143C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\ws\lib\permessage-deflate.js133561193158209864 0
-113C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\handlers.js133561232743499341 0
+113C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\handlers.js133561290983305533 0
 132C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\has-flag\index.js133561193149990668 0
 155C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\lmdb\dependencies\v8\v8-fast-api-calls.h133561193190605783 0
 154C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\highlight.js\scss\shades-of-purple.scss133561193178531249 0
@@ -22,7 +22,7 @@
 119C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\csso133561193169407379 1
 130C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\debug\README.md133561193156362315 0
 122C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\brorand133561193152730930 1
-106C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist133561243672383682 1
+106C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist133561292583610641 1
 125C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\mime-types133561193153025268 1
 121C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\base-x133561193152201477 1
 136C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\querystring\encode.js133561193149855895 0
@@ -104,7 +104,7 @@
 144C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\nan\nan_typedarray_contents.h133561193163985899 0
 152C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\ncp\test\symlink-fixtures\src\dir\bar133561193163062991 0
 167C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\@parcel\optimizer-image\parcel-image.darwin-x64.node133561193167426346 0
-111C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\colors.js133561239602123309 0
+111C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\colors.js133561272271773571 0
 148C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\es-abstract\2020\MonthFromTime.js133561193183321229 0
 150C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\@babel\plugin-syntax-flow\README.md133561193148642676 0
 140C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\unbox-primitive\README.md133561193158694153 0
@@ -164,7 +164,7 @@
 144C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\which-boxed-primitive\LICENSE133561193153348564 0
 159C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\postcss-modules-extract-imports\src\index.js133561193148744882 0
 129C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\hmac-drbg\test133561193155859771 1
-111C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\speech.js133561243882318424 0
+111C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\speech.js133561300847779262 0
 146C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\es-abstract\2020\MinFromTime.js133561193183055435 0
 156C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\es-abstract\2015\DefinePropertyOrThrow.js133561193175033404 0
 165C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\chacha8.c133561193170521756 0
@@ -6034,7 +6034,7 @@
 146C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\caniuse-lite\data\regions\MV.js133561194812105217 0
 135C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\hash.js\.eslintrc.js133561193148466264 0
 133C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\jake\lib\loader.js133561193161437082 0
-128C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist\index.d1c9aa47.js.map133561243672383682 0
+128C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist\index.d1c9aa47.js.map133561292583578058 0
 139C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\jake\lib\package_task.js133561193159620546 0
 161C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\highlight.js\scss\tomorrow-night-eighties.scss133561193180782477 0
 139C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\node_modules\jake\lib\publish_task.js133561193155419176 0
@@ -12555,4 +12555,4 @@
 124C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist\index.24a7de50.js133561209224730293 0
 125C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist\index.3a01df49.css133561231784848815 0
 129C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist\index.3a01df49.css.map133561231784895294 0
-124C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist\index.d1c9aa47.js133561243672331840 0
+124C:\Users\Olha\Documents\repositories\beginner-javascript-master\exercises\84 - Web Speech Colour Game\dist\index.d1c9aa47.js133561292583464763 0

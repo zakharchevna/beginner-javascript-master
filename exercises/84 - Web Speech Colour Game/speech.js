@@ -1,5 +1,5 @@
 import { handleResult } from "./handlers";
-import { colorsByLength } from "./colors";
+import { colorsByLength, isDark } from "./colors";
 
 const colorsEl = document.querySelector(".colors");
 
@@ -18,10 +18,8 @@ function start() {
 }
 
 function displayColors(colors) {
-  return colors.map((color) => `<span class="color ${color}">${color}</span>`).join("");
+  return colors.map((color) => `<span class="color ${color} ${isDark(color) ? "dark" : ""}" style="background-color: ${color};">${color}</span>`).join("");
 }
 
-
-
-colorsEl.innerHTML = displayColors(colorsByLength);
 start();
+colorsEl.innerHTML = displayColors(colorsByLength);

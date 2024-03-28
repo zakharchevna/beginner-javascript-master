@@ -160,3 +160,7 @@ export function isDark(colorName) {
 export const colorsByLength = Object.keys(colors).sort((a, b) => {
   return a.length - b.length;
 });
+
+export function isValidColor(word) {
+  return !!colors[word];
+}
